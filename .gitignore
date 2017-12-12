@@ -1,3 +1,7 @@
 /MNIST/MNIST_data/
 /MNIST/Kaggle/
 /MNIST/cvn-mnist-model/
+/NeuralStyleTransfer/images
+/NeuralStyleTransfer/output
+/NeuralStyleTransfer/pretrained-model
+*.pyc
