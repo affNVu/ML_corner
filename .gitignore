@@ -5,3 +5,6 @@
 /NeuralStyleTransfer/output
 /NeuralStyleTransfer/pretrained-model
 *.pyc
+/Ships_Iceberg/pretrained-model
+/Ships_Iceberg/dataset
+/Ships_Iceberg/cvn-model

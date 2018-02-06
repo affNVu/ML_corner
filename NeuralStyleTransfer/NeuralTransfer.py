@@ -125,7 +125,7 @@ def total_cost(J_content, J_style, alpha = 10, beta = 100):
     J = alpha*J_content + beta*J_style
     return J
 
-def model_nn(sess, input_image, num_iterations = 3000):
+def model_nn(sess, input_image, num_iterations = 10000):
     
 	# Initialize global variables (you need to run the session on the initializer)
 	sess.run(tf.global_variables_initializer())
@@ -164,12 +164,12 @@ if __name__ == "__main__":
 	sess = tf.InteractiveSession()
 
 	# Load, reshape and normalise content image
-	content_image = resize_image("images/content.jpg")
+	content_image = resize_image("images/tu_du.jpg")
 	content_image = reshape_and_normalize_image(content_image)
 
 
 	# Load, reshape and normalize style image
-	style_image = resize_image("images/style3.jpg")
+	style_image = resize_image("images/style.jpg")
 	style_image = reshape_and_normalize_image(style_image)
 
 	# Now, we initialize the "generated" image as a noisy image created from the content_image. 
@@ -238,17 +238,17 @@ if __name__ == "__main__":
     graph['conv5_4']  = _conv2d_relu(graph['conv5_3'], 34, 'conv5_4')
 	"""
 	STYLE_LAYERS = [
-		('conv1_1', 0.5),
+		('conv1_1', 0.3),
 		#('conv1_2', 0.1),
 		('conv2_1', 0.3),
 		#('conv2_2', 0.1),
-		('conv3_1', 0.15),
+		('conv3_1', 0.2),
 		#('conv3_2', 0.1),
-		#('conv3_3', 0.2),
-		#('conv3_4', 0.2),
+		#('conv3_3', 0.1),
+		#('conv3_4', 0.1),
 		('conv4_1', 0.1),
 		#('conv4_2', 0.1),
-		('conv5_1', 0.05)]
+		('conv5_1', 0.1)]
 	J_style = compute_style_cost(model, STYLE_LAYERS)
 
 	# Calculate cost
