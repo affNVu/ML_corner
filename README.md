@@ -17,5 +17,5 @@ The following is an example of 2000 iterations, with the style layers - weights:
 */  <br />
 
 ![alt text](https://i.imgur.com/wvcAVPC.png "Style image") <a href="url"><img src="https://i.imgur.com/QW9pQOk.jpg?1 " height="400" width="300" ></a>
-
+4. [Ship Iceberg](https://github.com/affNVu/ML_corner/tree/master/Ships_Iceberg). A Kaggle project. The objective is given a satellite image, decide if the object in the image is an iceberg or a ship. Used pretrained VGG16.
 
